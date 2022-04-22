@@ -7,25 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A16E5E6281189DF00EFF683 /* StartGamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A16E5DF281189DF00EFF683 /* StartGamePresenter.swift */; };
+		1A16E5E7281189DF00EFF683 /* StartGameWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A16E5E0281189DF00EFF683 /* StartGameWorker.swift */; };
+		1A16E5E8281189DF00EFF683 /* StartGameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A16E5E1281189DF00EFF683 /* StartGameRouter.swift */; };
+		1A16E5E9281189DF00EFF683 /* StartGameModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A16E5E2281189DF00EFF683 /* StartGameModels.swift */; };
+		1A16E5EA281189DF00EFF683 /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A16E5E3281189DF00EFF683 /* StartGameViewController.swift */; };
+		1A16E5EB281189DF00EFF683 /* StartGameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A16E5E4281189DF00EFF683 /* StartGameInteractor.swift */; };
+		1A1B474028073BBF00BEEB1F /* IndexPathExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B473F28073BBF00BEEB1F /* IndexPathExtention.swift */; };
+		1A34639D2800430A00F9B94F /* UIViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34639C2800430A00F9B94F /* UIViewExtention.swift */; };
+		1A34639F280229DD00F9B94F /* ArrayExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34639E280229DD00F9B94F /* ArrayExtention.swift */; };
 		1AA1F4C527FF5F370067C4E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA1F4C427FF5F370067C4E4 /* AppDelegate.swift */; };
 		1AA1F4C727FF5F370067C4E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA1F4C627FF5F370067C4E4 /* SceneDelegate.swift */; };
-		1AA1F4C927FF5F370067C4E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA1F4C827FF5F370067C4E4 /* ViewController.swift */; };
-		1AA1F4CC27FF5F370067C4E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AA1F4CA27FF5F370067C4E4 /* Main.storyboard */; };
 		1AA1F4CF27FF5F370067C4E4 /* MySudokuProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1AA1F4CD27FF5F370067C4E4 /* MySudokuProject.xcdatamodeld */; };
 		1AA1F4D127FF5F3B0067C4E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AA1F4D027FF5F3B0067C4E4 /* Assets.xcassets */; };
 		1AA1F4D427FF5F3B0067C4E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AA1F4D227FF5F3B0067C4E4 /* LaunchScreen.storyboard */; };
+		1AA1F4E227FF60300067C4E4 /* SudokuGamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA1F4DB27FF60300067C4E4 /* SudokuGamePresenter.swift */; };
+		1AA1F4E327FF60300067C4E4 /* SudokuGameWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA1F4DC27FF60300067C4E4 /* SudokuGameWorker.swift */; };
+		1AA1F4E427FF60300067C4E4 /* SudokuGameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA1F4DD27FF60300067C4E4 /* SudokuGameRouter.swift */; };
+		1AA1F4E527FF60300067C4E4 /* SudokuGameModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA1F4DE27FF60300067C4E4 /* SudokuGameModels.swift */; };
+		1AA1F4E627FF60300067C4E4 /* SudokuGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA1F4DF27FF60300067C4E4 /* SudokuGameViewController.swift */; };
+		1AA1F4E727FF60300067C4E4 /* SudokuGameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA1F4E027FF60300067C4E4 /* SudokuGameInteractor.swift */; };
+		1AA1F4EB27FF668A0067C4E4 /* SudokuGameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA1F4EA27FF668A0067C4E4 /* SudokuGameCollectionViewCell.swift */; };
+		1ABC7C50280D9FEB0047520F /* SudokuGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABC7C4F280D9FEB0047520F /* SudokuGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A16E5DF281189DF00EFF683 /* StartGamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGamePresenter.swift; sourceTree = "<group>"; };
+		1A16E5E0281189DF00EFF683 /* StartGameWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameWorker.swift; sourceTree = "<group>"; };
+		1A16E5E1281189DF00EFF683 /* StartGameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameRouter.swift; sourceTree = "<group>"; };
+		1A16E5E2281189DF00EFF683 /* StartGameModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameModels.swift; sourceTree = "<group>"; };
+		1A16E5E3281189DF00EFF683 /* StartGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameViewController.swift; sourceTree = "<group>"; };
+		1A16E5E4281189DF00EFF683 /* StartGameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameInteractor.swift; sourceTree = "<group>"; };
+		1A1B473F28073BBF00BEEB1F /* IndexPathExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPathExtention.swift; sourceTree = "<group>"; };
+		1A34639C2800430A00F9B94F /* UIViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtention.swift; sourceTree = "<group>"; };
+		1A34639E280229DD00F9B94F /* ArrayExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtention.swift; sourceTree = "<group>"; };
 		1AA1F4C127FF5F370067C4E4 /* MySudokuProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySudokuProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AA1F4C427FF5F370067C4E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AA1F4C627FF5F370067C4E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1AA1F4C827FF5F370067C4E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1AA1F4CB27FF5F370067C4E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1AA1F4CE27FF5F370067C4E4 /* MySudokuProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MySudokuProject.xcdatamodel; sourceTree = "<group>"; };
 		1AA1F4D027FF5F3B0067C4E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1AA1F4D327FF5F3B0067C4E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1AA1F4D527FF5F3B0067C4E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AA1F4DB27FF60300067C4E4 /* SudokuGamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuGamePresenter.swift; sourceTree = "<group>"; };
+		1AA1F4DC27FF60300067C4E4 /* SudokuGameWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuGameWorker.swift; sourceTree = "<group>"; };
+		1AA1F4DD27FF60300067C4E4 /* SudokuGameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuGameRouter.swift; sourceTree = "<group>"; };
+		1AA1F4DE27FF60300067C4E4 /* SudokuGameModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuGameModels.swift; sourceTree = "<group>"; };
+		1AA1F4DF27FF60300067C4E4 /* SudokuGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuGameViewController.swift; sourceTree = "<group>"; };
+		1AA1F4E027FF60300067C4E4 /* SudokuGameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuGameInteractor.swift; sourceTree = "<group>"; };
+		1AA1F4EA27FF668A0067C4E4 /* SudokuGameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuGameCollectionViewCell.swift; sourceTree = "<group>"; };
+		1ABC7C4F280D9FEB0047520F /* SudokuGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +69,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A16E5ED28118A0700EFF683 /* StartGame */ = {
+			isa = PBXGroup;
+			children = (
+				1A16E5E3281189DF00EFF683 /* StartGameViewController.swift */,
+				1A16E5E4281189DF00EFF683 /* StartGameInteractor.swift */,
+				1A16E5DF281189DF00EFF683 /* StartGamePresenter.swift */,
+				1A16E5E0281189DF00EFF683 /* StartGameWorker.swift */,
+				1A16E5E1281189DF00EFF683 /* StartGameRouter.swift */,
+				1A16E5E2281189DF00EFF683 /* StartGameModels.swift */,
+			);
+			path = StartGame;
+			sourceTree = "<group>";
+		};
+		1A34639B280042A000F9B94F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1A34639C2800430A00F9B94F /* UIViewExtention.swift */,
+				1A34639E280229DD00F9B94F /* ArrayExtention.swift */,
+				1A1B473F28073BBF00BEEB1F /* IndexPathExtention.swift */,
+				1ABC7C4F280D9FEB0047520F /* SudokuGenerator.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		1AA1F4B827FF5F370067C4E4 = {
 			isa = PBXGroup;
 			children = (
@@ -60,14 +114,37 @@
 			children = (
 				1AA1F4C427FF5F370067C4E4 /* AppDelegate.swift */,
 				1AA1F4C627FF5F370067C4E4 /* SceneDelegate.swift */,
-				1AA1F4C827FF5F370067C4E4 /* ViewController.swift */,
-				1AA1F4CA27FF5F370067C4E4 /* Main.storyboard */,
+				1A16E5ED28118A0700EFF683 /* StartGame */,
+				1AA1F4E927FF61240067C4E4 /* SudokuGame */,
+				1A34639B280042A000F9B94F /* Helpers */,
 				1AA1F4D027FF5F3B0067C4E4 /* Assets.xcassets */,
 				1AA1F4D227FF5F3B0067C4E4 /* LaunchScreen.storyboard */,
 				1AA1F4D527FF5F3B0067C4E4 /* Info.plist */,
 				1AA1F4CD27FF5F370067C4E4 /* MySudokuProject.xcdatamodeld */,
 			);
 			path = MySudokuProject;
+			sourceTree = "<group>";
+		};
+		1AA1F4E927FF61240067C4E4 /* SudokuGame */ = {
+			isa = PBXGroup;
+			children = (
+				1AA1F4EC27FF66920067C4E4 /* SudokuGameCollectionViewCell */,
+				1AA1F4DF27FF60300067C4E4 /* SudokuGameViewController.swift */,
+				1AA1F4E027FF60300067C4E4 /* SudokuGameInteractor.swift */,
+				1AA1F4DB27FF60300067C4E4 /* SudokuGamePresenter.swift */,
+				1AA1F4DD27FF60300067C4E4 /* SudokuGameRouter.swift */,
+				1AA1F4DC27FF60300067C4E4 /* SudokuGameWorker.swift */,
+				1AA1F4DE27FF60300067C4E4 /* SudokuGameModels.swift */,
+			);
+			path = SudokuGame;
+			sourceTree = "<group>";
+		};
+		1AA1F4EC27FF66920067C4E4 /* SudokuGameCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				1AA1F4EA27FF668A0067C4E4 /* SudokuGameCollectionViewCell.swift */,
+			);
+			path = SudokuGameCollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +207,6 @@
 			files = (
 				1AA1F4D427FF5F3B0067C4E4 /* LaunchScreen.storyboard in Resources */,
 				1AA1F4D127FF5F3B0067C4E4 /* Assets.xcassets in Resources */,
-				1AA1F4CC27FF5F370067C4E4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,24 +217,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A34639F280229DD00F9B94F /* ArrayExtention.swift in Sources */,
 				1AA1F4CF27FF5F370067C4E4 /* MySudokuProject.xcdatamodeld in Sources */,
-				1AA1F4C927FF5F370067C4E4 /* ViewController.swift in Sources */,
+				1AA1F4E627FF60300067C4E4 /* SudokuGameViewController.swift in Sources */,
+				1A16E5EA281189DF00EFF683 /* StartGameViewController.swift in Sources */,
+				1A16E5E9281189DF00EFF683 /* StartGameModels.swift in Sources */,
+				1A16E5E6281189DF00EFF683 /* StartGamePresenter.swift in Sources */,
+				1AA1F4E427FF60300067C4E4 /* SudokuGameRouter.swift in Sources */,
+				1A16E5E7281189DF00EFF683 /* StartGameWorker.swift in Sources */,
+				1ABC7C50280D9FEB0047520F /* SudokuGenerator.swift in Sources */,
+				1A16E5EB281189DF00EFF683 /* StartGameInteractor.swift in Sources */,
+				1AA1F4E527FF60300067C4E4 /* SudokuGameModels.swift in Sources */,
+				1AA1F4E327FF60300067C4E4 /* SudokuGameWorker.swift in Sources */,
 				1AA1F4C527FF5F370067C4E4 /* AppDelegate.swift in Sources */,
+				1A1B474028073BBF00BEEB1F /* IndexPathExtention.swift in Sources */,
 				1AA1F4C727FF5F370067C4E4 /* SceneDelegate.swift in Sources */,
+				1AA1F4E227FF60300067C4E4 /* SudokuGamePresenter.swift in Sources */,
+				1AA1F4E727FF60300067C4E4 /* SudokuGameInteractor.swift in Sources */,
+				1A34639D2800430A00F9B94F /* UIViewExtention.swift in Sources */,
+				1AA1F4EB27FF668A0067C4E4 /* SudokuGameCollectionViewCell.swift in Sources */,
+				1A16E5E8281189DF00EFF683 /* StartGameRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1AA1F4CA27FF5F370067C4E4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1AA1F4CB27FF5F370067C4E4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1AA1F4D227FF5F3B0067C4E4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,7 +380,6 @@
 				INFOPLIST_FILE = MySudokuProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -324,7 +407,6 @@
 				INFOPLIST_FILE = MySudokuProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
