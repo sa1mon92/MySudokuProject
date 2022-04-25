@@ -14,98 +14,24 @@ class SudokuGameService {
     private var gameModel: SudokuGameModel?
     private var selectedIndex: IndexPath?
     private var pencilOn: Bool = false
-    private let context =  (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
+    private let saveManager: SaveService = SaveManager()
     
     func gameDidChanged() {
         if let errorsCount = gameModel?.getErrorsCount(), errorsCount < 5 {
             DispatchQueue.global(qos: .utility).async {
-                self.save(gameModel: self.gameModel)
+                self.saveManager.save(gameModel: self.gameModel)
             }
         } else {
-            self.deleteSave()
+            self.saveManager.deleteSave()
         }
     }
     
     func startSavedGame(completion: @escaping (SudokuGameModel) -> Void) {
         
-        let fetchRequest: NSFetchRequest<Game> = Game.fetchRequest()
+        guard let gameModel = saveManager.getSavedGame() else { return }
         
-        do {
-            let games = try context.fetch(fetchRequest)
-            guard let game = games.first,
-                  let gameAnswersArray = game.gameAnswersArray as? [[Int]],
-                  let defaultAnswersArray = game.defaultAnswersArray as? [[Int?]],
-                  let userAnswersArray = game.userAnswersArray as? [[Int?]]
-            else { return }
-            
-            var pencils = [Pencil]()
-            if game.pencils != nil {
-                pencils = game.pencils as! [Pencil]
-            }
-            
-            let gameModel = SudokuGameModel(hintsCount: Int(game.hintsCount),
-                                            errorCount: Int(game.errorCount),
-                                            gameAnswersArray: gameAnswersArray,
-                                            defaultAnswersArray: defaultAnswersArray,
-                                            userAnswersArray: userAnswersArray,
-                                            pencils: pencils)
-            self.gameModel = gameModel
-            completion(gameModel)
-        } catch let error as NSError {
-            print(error.localizedDescription)
-        }
-    }
-    
-    func deleteSave() {
-        let fetchRequest: NSFetchRequest<Game> = Game.fetchRequest()
-        
-        do {
-            let games = try context.fetch(fetchRequest)
-            for game in games {
-                context.delete(game)
-            }
-            try context.save()
-            UserDefaults.standard.removeObject(forKey: "SaveGame")
-        } catch let error as NSError {
-            print(error.localizedDescription)
-        }
-    }
-    
-    func save(gameModel: SudokuGameModel?) {
-        
-        guard let gameModel = gameModel else { return }
-        
-        guard let entity = NSEntityDescription.entity(forEntityName: "Game", in: context) else {
-            return
-        }
-        let fetchRequest: NSFetchRequest<Game> = Game.fetchRequest()
-        var game: Game!
-        
-        do {
-            let games = try context.fetch(fetchRequest)
-            if games.first != nil {
-                game = games.first
-            } else {
-                game = NSManagedObject(entity: entity, insertInto: context) as? Game
-            }
-        } catch let error as NSError {
-            print(error.localizedDescription)
-        }
-        
-        game.hintsCount = Int16(gameModel.getHintsCount())
-        game.errorCount = Int16(gameModel.getErrorsCount())
-        game.gameAnswersArray = gameModel.getGameAnswers() as NSObject
-        game.userAnswersArray = gameModel.getUserAnswers() as NSObject
-        game.defaultAnswersArray = gameModel.getDefaultAnswers() as NSObject
-        game.pencils = gameModel.getPencils() as? NSObject
-        
-        do {
-            try context.save()
-            UserDefaults.standard.set(true, forKey: "SaveGame")
-        } catch let error as NSError {
-            print(error.localizedDescription)
-        }
+        self.gameModel = gameModel
+        completion(gameModel)
     }
     
     func getPetncilOn() -> Bool {
