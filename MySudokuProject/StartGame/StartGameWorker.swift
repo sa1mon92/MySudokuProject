@@ -9,7 +9,9 @@
 import UIKit
 
 class StartGameService {
-
+    
+    private let saveManager: SaveService = SaveManager()
+    
     func getDifficult(forIndex index: Int, completion: @escaping (SudokuGameDifficult) -> Void) {
         switch index {
         case 0:
@@ -23,7 +25,8 @@ class StartGameService {
     }
     
     func checkSavedGame() -> Bool {
-        if UserDefaults.standard.object(forKey: "SaveGame") as? Bool == true {
+        
+        if let _ = saveManager.getSavedGame() {
             return true
         } else {
             return false
