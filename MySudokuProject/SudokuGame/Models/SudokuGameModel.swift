@@ -1,95 +1,11 @@
 //
-//  SudokuGameModels.swift
+//  SudokuGameModel.swift
 //  MySudokuProject
 //
-//  Created by Дмитрий Садырев on 07.04.2022.
-//  Copyright (c) 2022 ___ORGANIZATIONNAME___. All rights reserved.
+//  Created by Дмитрий Садырев on 26.04.2022.
 //
 
-import UIKit
-
-enum SudokuGame {
-    
-    enum Model {
-        struct Request {
-            enum RequestType {
-                case selectCell(index: IndexPath)
-                case pauseButtonTouch
-                case eraserButtonTouch
-                case pencilButtonTouch
-                case lampButtonTouch
-                case numberButtonTouch(index: Int)
-                case startNewGame(withDifficult: SudokuGameDifficult)
-                case startSavedGame
-            }
-        }
-        struct Response {
-            enum ResponseType {
-                case presentGame(game: SudokuGameModel, selectedCellIndex: IndexPath?, pencilIsEnable: Bool)
-                case presentPause
-                case presentGameOver
-                case presentTimer(text: String)
-            }
-        }
-        struct ViewModel {
-            enum ViewModelData {
-                case displayGame(viewModel: SudokuGameViewModel)
-                case displayPause
-                case displayGameOver
-                case presentTimer(text: String)
-            }
-        }
-    }
-    
-}
-
-struct PencilLabel {
-    var label: UILabel
-    var enable: Bool
-    
-    mutating func setupLabel(label: UILabel) {
-        self.label = label
-    }
-    
-    mutating func setupEnable(enable: Bool) {
-        self.enable = enable
-    }
-}
-
-// MARK: - Sudoku Game View Model
-
-struct SudokuGameViewModel {
-    
-    enum SudokuGameCellType {
-        case Default
-        case User
-        case Error
-        case Pencil
-        case Unknown
-    }
-    
-    var lampCount: Int
-    var errorCount: Int
-    var pencilIsEnable: Bool
-    var cells: [Cell]
-    
-    struct Cell: Equatable {
-        var index: IndexPath
-        var type: SudokuGameCellType
-        var bgColor: UIColor?
-        var numberValue: Int?
-        var pencilValues: [Int]?
-    }
-}
-
-// MARK: - Sudoku Game Model
-
-enum SudokuGameDifficult {
-    
-    case Easy
-    case Normal
-    case Hard
-}
+import Foundation
 
 struct Pencil {
     let index: IndexPath
@@ -108,7 +24,7 @@ struct Pencil {
     }
 }
 
-final class SudokuGameModel {
+struct SudokuGameModel {
     
     private var hintsCount: Int
     private var errorCount: Int
@@ -136,7 +52,7 @@ final class SudokuGameModel {
         self.pencils = nil
     }
     
-    func addError() {
+    mutating func addError() {
         if errorCount < 5 {
             errorCount += 1
         }
@@ -162,7 +78,7 @@ final class SudokuGameModel {
         return hintsCount
     }
     
-    func spendHint() {
+    mutating func spendHint() {
         if hintsCount > 0 {
             hintsCount -= 1
         }
@@ -172,13 +88,13 @@ final class SudokuGameModel {
         return pencils
     }
     
-    func setUserAnswer(_ value: Int, forIndex index: IndexPath) {
+    mutating func setUserAnswer(_ value: Int, forIndex index: IndexPath) {
         if defaultAnswersArray[index.section][index.row] == nil {
             userAnswersArray[index.section][index.row] = value
         }
     }
     
-    func removeUserAnswer(forIndex index: IndexPath) {
+    mutating func removeUserAnswer(forIndex index: IndexPath) {
         if getGameAnswer(forIndex: index) != getUserAnswer(forIndex: index) {
             userAnswersArray[index.section][index.row] = nil
         }
@@ -218,7 +134,7 @@ final class SudokuGameModel {
         return false
     }
     
-    func setPencilValue(_ value: Int, forIndex index: IndexPath) {
+    mutating func setPencilValue(_ value: Int, forIndex index: IndexPath) {
         
         guard getUserAnswer(forIndex: index) == nil && getDefaultAnswer(forIndex: index) == nil else { return }
         
@@ -233,7 +149,7 @@ final class SudokuGameModel {
         }
     }
     
-    func removePencilValue(_ value: Int, forIndex index: IndexPath) {
+    mutating func removePencilValue(_ value: Int, forIndex index: IndexPath) {
         
         guard let pencils = pencils,
               let i = pencils.firstIndex(where: { $0.index == index })
@@ -246,7 +162,7 @@ final class SudokuGameModel {
         }
     }
     
-    func removeAllPencils(forIndex index: IndexPath) {
+    mutating func removeAllPencils(forIndex index: IndexPath) {
         
         guard let pencils = pencils,
               let i = pencils.firstIndex(where: { $0.index == index })
