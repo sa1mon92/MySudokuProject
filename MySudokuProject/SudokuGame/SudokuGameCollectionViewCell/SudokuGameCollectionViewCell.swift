@@ -26,6 +26,8 @@ class SudokuGameCollectionViewCell: UICollectionViewCell {
     }
     
     override func prepareForReuse() {
+        super.prepareForReuse()
+        
         pencilLabels.forEach { label in
             label.removeFromSuperview()
         }
