@@ -1,12 +1,12 @@
 ###  __MySudokuProject__
-This is a popular puzzle game with three difficulty levels. The sudoku generator creates unique levels based on the selected difficulty level.
+This is a popular puzzle game with three difficulty levels. The sudoku generator creates unique levels based on the selected difficulty level. The game also has a save.
 ###### Application stack:
 * UIKit (code)
 * Clean Swift
 * Core Data
 ***
 ###  __Preview__
-![<img src="Preview_1.png" width="397" height="800">](Preview_1.png)![<img src="Preview_2.png" width="397" height="800">](Preview_2.png)
+![<img src="Preview_1.png" width="397" height="800">](Preview_1.png)
 ***
 ###  __Feedback__
 Telegram - @Sa1monch  
