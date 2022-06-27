@@ -9,5 +9,5 @@ This is a popular puzzle game with three difficulty levels.
 ![<img src="Preview_1.png" width="397" height="800">](Preview_1.png)![<img src="Preview_2.png" width="397" height="800">](Preview_2.png)
 ***
 ###  __Feedback__
-Telegram - @Sa1monch
+Telegram - @Sa1monch  
 Email - sadyrevdimon@icloud.com
