@@ -1,5 +1,5 @@
 ###  __MySudokuProject__
-This is a popular puzzle game with three difficulty levels.
+This is a popular puzzle game with three difficulty levels. The sudoku generator creates unique levels based on the selected difficulty level
 ###### Application stack:
 * UIKit (code)
 * Clean Swift
